@@ -1,0 +1,85 @@
+#root {
+  margin:0px;
+  padding-bottom: 20px;
+  color: rgb(80, 80, 80)
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  height: 80px;
+  background-color: rgb(255, 217, 0);
+  width: 100%;
+}
+
+.NavBar h1 {
+  margin: 0px;
+}
+
+.navBarImg {
+  height: 80%;
+  margin: 10px;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #888585;
+  height: 100%;
+  width: auto;
+  padding-top: 20px;
+  margin-top: 80px;
+}
+
+.sideBar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.recipeCard {
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px black;
+  display: flex;
+}
+
+.fotoDeReceta {
+  height: 200px;
+}
+
+.contenido {
+  margin-top: 100px;
+  margin-left: 115px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  background-color: rgb(255, 217, 0);
+}
+footer a {
+  text-decoration: none;
+}
+
+footer a img {
+  height: 80%;
+  margin-right: 5px;
+  margin-top:3px
+}
