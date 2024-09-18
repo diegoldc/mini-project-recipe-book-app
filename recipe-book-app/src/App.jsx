@@ -1,20 +1,18 @@
-import './App.css'
-import Navbar from './componentes/Navbar'
-import Sidebar from './componentes/Sidebar'
-import Footer from './componentes/Footer'
-import Text from './componentes/Text'
-import Content from './componentes/Content'
+import "./App.css";
+import Navbar from "./componentes/Navbar";
+import Sidebar from "./componentes/Sidebar";
+import Footer from "./componentes/Footer";
+import List from "./componentes/List";
 
 function App() {
-
   return (
     <>
-    <Navbar />
-    <Sidebar />
-    <Content />
-    <Footer />
+      <Navbar />
+      <Sidebar />
+      <List />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
