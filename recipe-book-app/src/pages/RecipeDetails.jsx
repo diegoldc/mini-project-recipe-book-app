@@ -12,7 +12,7 @@ function RecipeDetails() {
   console.log(recipeToDisplay.name)
 
   return (
-    <div>
+    <div className="singleRecipePage">
       <h1>{recipeToDisplay.name}</h1>
       <h3>Calorias: {recipeToDisplay.calories}</h3>
       { recipeToDisplay.servings === 1 ? (

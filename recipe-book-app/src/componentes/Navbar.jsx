@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="NavBar">
       <img className="navBarImg" src={imgLogo} alt="appLogo" />
-      <h1>Hecho en Casa</h1>
+      <h1 className="ibm-plex-mono-bold-italic">Hecho en Casa</h1>
     </nav>
   )
 }

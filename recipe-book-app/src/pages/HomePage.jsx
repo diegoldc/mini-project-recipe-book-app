@@ -1,8 +1,11 @@
 import List from "../componentes/List"
-  function HomePage() {
+  function HomePage({props}) {
   return (
     <div>
-      <List />
+      <List 
+      todasLasRecetas={props.listaDeRecetas}
+      // eliminarTarjeta={props.eliminarTarjeta}
+      />
     </div>
   )
 }

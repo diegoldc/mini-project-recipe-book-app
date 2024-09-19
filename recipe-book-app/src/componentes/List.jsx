@@ -2,21 +2,23 @@ import recipes from "../data/recipes.json";
 import { useState } from "react";
 import ListItem from "./ListItem";
 
-function List() {
-  const [listaDeRecetas, setlistaDeRecetas] = useState(recipes);
+function List(props) {
+  // const [listaDeRecetas, setlistaDeRecetas] = useState(recipes);
 
-  const eliminarTarjeta = (index) => {
-    const clone = listaDeRecetas.slice(0);
-    clone.splice(index, 1);
-    setlistaDeRecetas(clone);
-  };
+  // const eliminarTarjeta = (index) => {
+  //   const clone = listaDeRecetas.slice(0);
+  //   clone.splice(index, 1);
+  //   setlistaDeRecetas(clone);
+  // };
+
+  console.log(props)
 
   return (
     <ul className="contenido">
-      {listaDeRecetas.map((plato, index) => (
+      {props.listaDeRecetas.map((plato, index) => (
         <ListItem
           {...plato}
-          eliminarTarjeta={eliminarTarjeta}
+          eliminarTarjeta={props.eliminarTarjeta}
           index={index}
           />
       ))}

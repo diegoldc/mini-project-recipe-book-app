@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
 
 function Sidebar() {
   return (
     <aside className="sideBar">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
+      <Link to="/">Home</Link>
+      
+      <Link to="/about">About Us</Link>
     </aside>
   )
 }

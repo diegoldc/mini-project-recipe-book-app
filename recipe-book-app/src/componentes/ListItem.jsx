@@ -6,7 +6,7 @@ function ListItem(props) {
   // const {id,name,calories,image,servings} = props
   return (
     <li key ={props.id} className="recipeCard">
-      <Link to={`/recipes/${props.id}`}>
+      <Link to={`/recipes/${props.id}`} style={{textDecoration: "none", color:"black"}}>
       <img className="fotoDeReceta" src={props.image} alt="foto de receta" />
       <section>
         <h1>{props.name}</h1>
@@ -22,7 +22,7 @@ function ListItem(props) {
         </p>
       </section>
     </Link>
-      <button onClick={() => props.eliminarTarjeta(props.index)}>Delete</button>
+      <button className="delete" onClick={() => props.eliminarTarjeta(props.index)}>Delete</button>
     </li>
   );
 }
