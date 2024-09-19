@@ -15,13 +15,10 @@ function List() {
     <ul className="contenido">
       {listaDeRecetas.map((plato, index) => (
         <ListItem
-          index={index}
-          img={plato.image}
-          nombre={plato.name}
-          calorias={plato.calories}
-          porciones={plato.servings}
+          {...plato}
           eliminarTarjeta={eliminarTarjeta}
-        />
+          index={index}
+          />
       ))}
     </ul>
   );
