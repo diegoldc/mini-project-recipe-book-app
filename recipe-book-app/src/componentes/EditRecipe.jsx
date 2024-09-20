@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React from 'react'
+import { useState } from 'react'
 
-function Form(props) {
-
-  const { listaDeRecetas , setTodasLasRecetas } = props
-
+function EditRecipe(props) {
+  const { todasLasRecetas, setTodasLasRecetas , index, close} = props
+  // const { name , calories , img , servings } = props
+  
   const [ nameValue , setNameValue ] = useState ("")
   const [ caloriesValue , setCaloriesValue ] = useState ("")
   const [ servingsValue , setServingsValue ] = useState ("")
@@ -11,30 +12,24 @@ function Form(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    let nuevaReceta = {
-      id: nameValue,
-      name: nameValue,
-      calories: caloriesValue,
-      image: imgValue,
-      servings: servingsValue
-    }
-
-    setTodasLasRecetas((current) => {
-      const clone = [...current]
-      clone.unshift(nuevaReceta)
-      return clone
-    })
-
-    setNameValue("")
-    setCaloriesValue("")
-    setServingsValue("")
-    setImgValue("")
+    const clone = [...todasLasRecetas]
+    console.log(clone)
+    nameValue !== "" && (clone[index].name = nameValue) 
+    caloriesValue !== "" && (clone[index].calories = caloriesValue) 
+    servingsValue !== "" && (clone[index].servings = servingsValue) 
+    imgValue !== "" && (clone[index].image = imgValue) 
+    // clone[index].name = nameValue
+    // clone[index].calories = caloriesValue
+    // clone[index].servings = servingsValue
+    // clone[index].image = imgValue
+    setTodasLasRecetas(clone)
+    close()
   }
 
 
   return (
-    <form onSubmit={handleSubmit} className="formAddNew">
-      <h1>Agregar nueva receta:</h1>
+    <form onSubmit={handleSubmit} className="formEdit">
+      <h1>Editar receta:</h1>
       <div>
         <label htmlFor="name">Nombre: </label>
         <input
@@ -79,9 +74,9 @@ function Form(props) {
           value={servingsValue}
         />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Update</button>
     </form>
-  );
+  )
 }
 
-export default Form;
+export default EditRecipe

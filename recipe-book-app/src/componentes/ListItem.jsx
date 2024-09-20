@@ -1,6 +1,9 @@
 import checkImg from "../assets/check.png";
 import crossImg from "../assets/cross.png";
 import { Link } from "react-router-dom";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import EditRecipe from "./EditRecipe";
 
 function ListItem(props) {
   // const {id,name,calories,image,servings} = props
@@ -10,7 +13,8 @@ function ListItem(props) {
     clone.splice(index, 1);
     props.setTodasLasRecetas(clone);
   }
-  
+
+
   return (
     <li key={props.index} className="recipeCard">
       <Link to={`/recipes/${props.id}`} style={{textDecoration: "none", color:"black"}}>
@@ -22,7 +26,7 @@ function ListItem(props) {
         <p>
           Bajo en Calorías: 
           <img
-            style={{ height: "20px" }}
+            style={{ height: "20px", marginLeft: "5px" }}
             src={props.calories <= 200 ? checkImg : crossImg}
             alt="cross"
             />
@@ -30,6 +34,16 @@ function ListItem(props) {
       </section>
     </Link>
       <button className="delete" onClick={() => eliminarTarjeta(props.index)}>Delete</button>
+      <Popup trigger={<button className="delete">Edit</button>} position="bottom">
+        {(close) => (
+          <EditRecipe
+            todasLasRecetas={props.todasLasRecetas}
+            setTodasLasRecetas={props.setTodasLasRecetas}
+            index={props.index}
+            close={close}
+          />
+        )}
+      </Popup>
     </li>
   );
 }
