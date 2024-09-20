@@ -6,7 +6,7 @@ import imgJuan from "../assets/juan.jpg"
 
 function About() {
   return (
-    <div style={{display:"flex",justifyContent:"space-around"}}>
+    <div style={{display:"flex",justifyContent:"space-around", gap:"20px"}}>
     <article className='aboutCard'>
       <img className='profilePic' src={imgJuan} alt="foto de perfil" />
       <div>

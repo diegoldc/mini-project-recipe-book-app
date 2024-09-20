@@ -84,7 +84,7 @@
 
 
 #root {
-  margin:100px;
+  margin-left:100px;
   margin-top: 130px;
   padding-bottom: 20px;
   color: rgb(80, 80, 80)
@@ -123,16 +123,18 @@
   flex-direction: column;
   background-color: #888585;
   height: 100%;
-  width: auto;
+  width: 90px;
+  padding: 0px;
   padding-top: 20px;
   margin-top: 80px;
+
 }
 
 .sideBar a {
   text-decoration: none;
   color: white;
   font-size: 18px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .aboutCard {
@@ -142,16 +144,17 @@
   font-size: 1.5em;
   display: flex;
   gap: 50px;
+  width:35%
 }
 
 .profilePic{
-  height:400px;
-  width: 400px;
+  height:80%;
+  width: 80%;
   border-radius: 20px;
 }
 
 .recipeCard {
-  margin: 5px;
+  /* margin: 5px; */
   padding: 10px;
   /* border: solid 1px black; */
   display: flex;
@@ -202,7 +205,23 @@
 .contenido {
   display:flex;
   flex-wrap: wrap;
-  gap: 40px;  
+  gap: 20px;  
+}
+
+.formAddNew {
+  margin-left: 40px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+  /* border: solid 1px black; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 0px #000000;
+  gap: 10px;
 }
 
 footer {

@@ -24,7 +24,7 @@ function Form(props) {
       clone.unshift(nuevaReceta)
       return clone
     })
-    
+
     setNameValue("")
     setCaloriesValue("")
     setServingsValue("")
@@ -33,7 +33,7 @@ function Form(props) {
 
 
   return (
-    <form>
+    <form className="formAddNew">
       <h1>Agregar nueva receta:</h1>
       <div>
         <label htmlFor="name">Nombre: </label>

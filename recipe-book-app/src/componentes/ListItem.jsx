@@ -12,7 +12,7 @@ function ListItem(props) {
   }
   
   return (
-    <li key={props.id} className="recipeCard">
+    <li key={props.index} className="recipeCard">
       <Link to={`/recipes/${props.id}`} style={{textDecoration: "none", color:"black"}}>
       <img className="fotoDeReceta" src={props.image} alt="foto de receta" />
       <section>
