@@ -2,13 +2,14 @@ import recipes from "../data/recipes.json"
 import { useParams } from "react-router-dom"
 
 
-function RecipeDetails() {
+function RecipeDetails(props) {
 // poner un link en la lista a esta pagina
+  const {listaDeRecetas} = props
 
   const parametrosDinamicos = useParams()
   console.log(parametrosDinamicos)
 
-  const recipeToDisplay = recipes.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
+  const recipeToDisplay = listaDeRecetas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
   console.log(recipeToDisplay.name)
 
   return (

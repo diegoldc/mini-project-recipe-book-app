@@ -4,8 +4,15 @@ import { Link } from "react-router-dom";
 
 function ListItem(props) {
   // const {id,name,calories,image,servings} = props
+
+  const eliminarTarjeta = (index) => {
+    const clone = [...props.todasLasRecetas]
+    clone.splice(index, 1);
+    props.setTodasLasRecetas(clone);
+  }
+  
   return (
-    <li key ={props.id} className="recipeCard">
+    <li key={props.id} className="recipeCard">
       <Link to={`/recipes/${props.id}`} style={{textDecoration: "none", color:"black"}}>
       <img className="fotoDeReceta" src={props.image} alt="foto de receta" />
       <section>
@@ -22,7 +29,7 @@ function ListItem(props) {
         </p>
       </section>
     </Link>
-      <button className="delete" onClick={() => props.eliminarTarjeta(props.index)}>Delete</button>
+      <button className="delete" onClick={() => eliminarTarjeta(props.index)}>Delete</button>
     </li>
   );
 }

@@ -14,11 +14,7 @@ import { useState } from "react";
 function App() {
   const [todasLasRecetas, setTodasLasRecetas] = useState(recipes);
 
-  const eliminarTarjeta = (index) => {
-    const clone = todasLasRecetas.slice(0);
-    clone.splice(index, 1);
-    setTodasLasRecetas(clone);
-  };
+
 
   return (
     <>
@@ -28,7 +24,7 @@ function App() {
         <Route
           path="/"
           element={<List listaDeRecetas={todasLasRecetas} 
-          eliminarTarjeta={eliminarTarjeta} />}
+          setTodasLasRecetas={setTodasLasRecetas} />}
         />
         <Route
           path="/recipes/:recipeId"

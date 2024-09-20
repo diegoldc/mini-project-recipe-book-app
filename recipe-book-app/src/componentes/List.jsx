@@ -1,6 +1,7 @@
-import recipes from "../data/recipes.json";
+// import recipes from "../data/recipes.json";
 import { useState } from "react";
 import ListItem from "./ListItem";
+import Form from "./Form";
 
 function List(props) {
   // const [listaDeRecetas, setlistaDeRecetas] = useState(recipes);
@@ -11,18 +12,22 @@ function List(props) {
   //   setlistaDeRecetas(clone);
   // };
 
-  console.log(props)
+  // console.log(props)
 
   return (
+    <>
+    <Form listaDeRecetas={props.todasLasRecetas} setTodasLasRecetas={props.setTodasLasRecetas}/>
     <ul className="contenido">
       {props.listaDeRecetas.map((plato, index) => (
         <ListItem
-          {...plato}
-          eliminarTarjeta={props.eliminarTarjeta}
-          index={index}
-          />
+        {...plato}
+        todasLasRecetas={props.listaDeRecetas}
+        setTodasLasRecetas={props.setTodasLasRecetas}
+        index={index}
+        />
       ))}
     </ul>
+    </>
   );
 }
 
