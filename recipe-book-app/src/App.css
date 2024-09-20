@@ -134,10 +134,16 @@
 }
 
 .sideBar a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
+  /* text-decoration: none; */
+  /* color: white; */
+  /* font-size: 18px; */
   padding: 0 10px;
+}
+
+.sideBar img{
+  width: 50px;
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
 .aboutCard {
