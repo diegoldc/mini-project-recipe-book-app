@@ -179,17 +179,48 @@
   box-shadow: 0px 0px 16px 0px rgb(255, 217, 0);
 }
 
-.delete {
+.favRecipeCard {
+  margin: 15px;
+  padding: 10px;
+  /* border: solid 1px black; */
+  
+  justify-content: space-between;
+  align-items: center;
+  text-align: start; 
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 0px #000000;
+  display: flex;
+  width:900px;
+  /* gap:70px */
+}
+
+.favRecipeCard:hover{
+  box-shadow: 0px 0px 16px 0px rgb(255, 217, 0);
+}
+
+.cardButton {
   border: none;
   background-color: rgb(255, 217, 0);
-  width: 40%;
+  width: 160px;
   height: 40px;
   border-radius: 10px;
   margin: 5px;
 }
 
-.delete:hover {
-  border: 2px solid black;
+.del {
+  margin-top: 20px;
+}
+
+.del:hover {
+  background-color: rgb(255, 79, 79);
+}
+
+.fav:hover {
+  background-color: lightskyblue;
+}
+
+.edit:hover {
+  background-color: lightgreen;
 }
 
 .fotoDeReceta {
@@ -231,9 +262,11 @@
 }
 
 [role='tooltip'].popup-content {
-padding: 5px;
-background-color: transparent;
-border:none;
+  width: 400px;
+  padding: 5px;
+  background-color: transparent;
+  border:none;
+  text-align: center;
 }
 .popup-content {
   border:none;
@@ -287,6 +320,33 @@ border:none;
   box-shadow: 0px 0px 8px 0px #000000;
   gap: 10px;
 }
+
+.searchBar {
+  margin-top: 15px;
+  margin-left: 40px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 0px #000000;
+  gap: 10px;
+}
+
+.searchBar div {
+  margin:20px
+}
+
+.searchBar button {
+  width: 30px;
+  height:21px;
+  background-color: rgb(255, 217, 0);
+  border: 1px solid black;
+}
+
 
 footer {
   text-align: center;

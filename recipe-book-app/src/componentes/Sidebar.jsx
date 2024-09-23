@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import imgHome from "../assets/home.png"
 import imgAbout from "../assets/about.png"
+import imgFav from "../assets/corazon.png"
 
 function Sidebar() {
   return (
@@ -8,6 +9,8 @@ function Sidebar() {
       <Link to="/"><img src={imgHome} alt="img-home" /></Link>
       
       <Link to="/about"><img src={imgAbout} alt="img-about" /></Link>
+
+      <Link to="/favorites"><img src={imgFav} alt="img-fav" /></Link>
     </aside>
   )
 }

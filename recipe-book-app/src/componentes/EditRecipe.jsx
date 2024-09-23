@@ -18,10 +18,6 @@ function EditRecipe(props) {
     caloriesValue !== "" && (clone[index].calories = caloriesValue) 
     servingsValue !== "" && (clone[index].servings = servingsValue) 
     imgValue !== "" && (clone[index].image = imgValue) 
-    // clone[index].name = nameValue
-    // clone[index].calories = caloriesValue
-    // clone[index].servings = servingsValue
-    // clone[index].image = imgValue
     setTodasLasRecetas(clone)
     close()
   }
@@ -36,7 +32,7 @@ function EditRecipe(props) {
           type="text"
           name="name"
           id="name"
-          placeholder="Nombre de la receta"
+          placeholder={todasLasRecetas[index].name}
           onChange={ () => setNameValue(event.target.value)}
           value={nameValue}
         />
@@ -47,7 +43,7 @@ function EditRecipe(props) {
           type="number"
           name="calories"
           id="calories"
-          placeholder="Cantidad de calorias"
+          placeholder={todasLasRecetas[index].calories}
           onChange={() => setCaloriesValue(event.target.value)}
           value={caloriesValue}
         />
@@ -69,7 +65,7 @@ function EditRecipe(props) {
           type="number"
           name="servings"
           id="servings"
-          placeholder="Porciones"
+          placeholder={todasLasRecetas[index].servings}
           onChange={ () => setServingsValue(event.target.value)}
           value={servingsValue}
         />

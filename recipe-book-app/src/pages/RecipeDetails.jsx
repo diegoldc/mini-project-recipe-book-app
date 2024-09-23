@@ -1,5 +1,6 @@
 import recipes from "../data/recipes.json"
 import { useParams } from "react-router-dom"
+import imgPlatoVacio from "../assets/plato-vacio.jpg"
 
 
 function RecipeDetails(props) {
@@ -21,7 +22,7 @@ function RecipeDetails(props) {
       ) : (
         <h4>Con esta receta comen {recipeToDisplay.servings} personas.</h4>
       )}
-      <img src={recipeToDisplay.image} alt="imagen de la receta" />
+      <img src={recipeToDisplay.image === "" ? imgPlatoVacio : recipeToDisplay.image} alt="imagen de la receta" />
     </div>
   )
 }

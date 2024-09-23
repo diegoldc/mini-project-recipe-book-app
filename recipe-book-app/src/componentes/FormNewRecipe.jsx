@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Form(props) {
+function FormNewRecipe(props) {
 
-  const { listaDeRecetas , setTodasLasRecetas } = props
+  const { setTodasLasRecetas } = props
 
   const [ nameValue , setNameValue ] = useState ("")
   const [ caloriesValue , setCaloriesValue ] = useState ("")
@@ -11,6 +11,7 @@ function Form(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+
     let nuevaReceta = {
       id: nameValue,
       name: nameValue,
@@ -79,9 +80,10 @@ function Form(props) {
           value={servingsValue}
         />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="cardButton" >Submit</button>
+
     </form>
   );
 }
 
-export default Form;
+export default FormNewRecipe;

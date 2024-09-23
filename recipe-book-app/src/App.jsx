@@ -10,11 +10,11 @@ import NotFoundPage from "./pages/NotFoundPage";
 import recipes from "./data/recipes.json";
 import List from "./componentes/List";
 import { useState } from "react";
+import Favoritos from "./pages/Favoritos";
 
 function App() {
   const [todasLasRecetas, setTodasLasRecetas] = useState(recipes);
-
-
+  const [recetasFavoritas, setRecetasFavoritas] = useState([]);
 
   return (
     <>
@@ -23,12 +23,30 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<List listaDeRecetas={todasLasRecetas} 
-          setTodasLasRecetas={setTodasLasRecetas} />}
+          element={
+            <List
+              listaDeRecetas={todasLasRecetas}
+              setTodasLasRecetas={setTodasLasRecetas}
+              recetasFavoritas={recetasFavoritas}
+              setRecetasFavoritas={setRecetasFavoritas}
+
+            />
+          }
         />
         <Route
           path="/recipes/:recipeId"
-          element={<RecipeDetails listaDeRecetas={todasLasRecetas} />}
+          element={
+            <RecipeDetails
+              listaDeRecetas={todasLasRecetas} />}
+        />
+        <Route
+          path="/favorites"
+          element={
+            <Favoritos
+              recetasFavoritas={recetasFavoritas}
+              setRecetasFavoritas={setRecetasFavoritas}
+            />
+          }
         />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />
