@@ -1,22 +1,30 @@
 import recipes from "../data/recipes.json"
 import { useParams , useLocation } from "react-router-dom"
 import imgPlatoVacio from "../assets/plato-vacio.jpg"
+import { useEffect } from "react"
+
 
 
 function RecipeDetails(props) {
+
+  
   const location = useLocation()
-
+  
   const parametrosDinamicos = useParams()
-
+  
   let recipeToDisplay
-
+  
   if (location.state === "fav"){
     recipeToDisplay = props.recetasFavoritas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
   }
   if (location.state === "home"){
     recipeToDisplay = props.listaDeRecetas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
   }
-
+  
+  useEffect(() => {
+    const titulo = document.querySelector("#tituloPestaña")
+    titulo.innerText = `${recipeToDisplay.name} - Hecho en Casa`
+  },[])
 
   return (
     <div className="singleRecipePage">

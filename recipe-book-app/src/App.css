@@ -211,6 +211,10 @@
   margin-top: 20px;
 }
 
+.isFav {
+  background-color: rgb(76, 163, 218);
+}
+
 .del:hover {
   background-color: rgb(255, 79, 79);
 }

@@ -5,24 +5,30 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import EditRecipe from "./EditRecipe";
 import imgPlatoVacio from "../assets/plato-vacio.jpg"
+import { useState } from "react";
 
 function ListItem(props) {
   // const {id,name,calories,image,servings} = props
-
   const eliminarTarjeta = (index) => {
     const clone = [...props.todasLasRecetas]
     clone.splice(index, 1);
     props.setTodasLasRecetas(clone);
   }
 
+
+
   const handleFavorite = (index) => {
+
+    setIsFav(true)
+
     const newFav = {
       id:props.todasLasRecetas[index].id,
       name:props.todasLasRecetas[index].name,
       calories:props.todasLasRecetas[index].calories,
       image:props.todasLasRecetas[index].image,
-      servings:props.todasLasRecetas[index].servings
+      servings:props.todasLasRecetas[index].servings,
     }
+
 
     const newFavArr = [...props.recetasFavoritas]
 
@@ -30,7 +36,6 @@ function ListItem(props) {
     !isRepeted && newFavArr.unshift(newFav)
 
     props.setRecetasFavoritas(newFavArr)
-    console.log(newFavArr)
 
   }
 

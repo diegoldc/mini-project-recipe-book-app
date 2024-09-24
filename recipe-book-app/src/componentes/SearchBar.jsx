@@ -7,6 +7,7 @@ function SearchBar({
   setSearchPorciones,
   porcionesMayor,
   setPorcionesMayor,
+  setSortCards,
 }) {
   const handleCaloriesMaourBtn = () => {
     caloriasMayor ? setCaloriasMayor(false) : setCaloriasMayor(true);
@@ -22,7 +23,7 @@ function SearchBar({
       </div>
       
       <div>
-        <label htmlFor="calorias">Calorias:</label>
+        <label htmlFor="calorias">Calorias: </label>
         <button onClick={handleCaloriesMaourBtn}>
           {caloriasMayor ? ">=" : "<"}
         </button>
@@ -34,7 +35,7 @@ function SearchBar({
       </div>
 
       <div>
-        <label htmlFor="porciones">Porciones:</label>
+        <label htmlFor="porciones">Porciones: </label>
         <button onClick={handlePorcionesMaourBtn}>
           {porcionesMayor ? ">=" : "<"}
         </button>
@@ -43,6 +44,14 @@ function SearchBar({
           value={searchPorciones}
           onChange={() => setSearchPorciones(event.target.value)}
         />
+      </div>
+      <div>
+        <label htmlFor="filtro">Filtrar por: </label>
+        <select name="filtro" id="filtro" onClick={() => setSortCards(event.target.value)}>
+          <option value="">Choose One</option>
+          <option value="calories">calorias</option>
+          <option value="servings">Porciones</option>
+        </select>
       </div>
     </div>
   );

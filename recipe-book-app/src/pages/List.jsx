@@ -1,8 +1,9 @@
 // import recipes from "../data/recipes.json";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import ListItem from "../componentes/ListItem";
 import FormNewRecipe from "../componentes/FormNewRecipe";
 import SearchBar from "../componentes/SearchBar";
+
 
 
 function List(props) {
@@ -16,10 +17,16 @@ function List(props) {
 
   // console.log(props)
 
+  useEffect(() => {
+    const titulo = document.querySelector("#tituloPestaña")
+    titulo.innerText = "Home - Hecho en Casa"
+  },[])
+
   const [ searchCalorias , setSearchCalorias ] = useState("")
   const [ caloriasMayor , setCaloriasMayor ] = useState(true)
   const [ searchPorciones , setSearchPorciones ] = useState("")
   const [ porcionesMayor , setPorcionesMayor ] = useState(true)
+  const [ sortCards , setSortCards ] = useState("")
   
   return (
     <>
@@ -33,6 +40,7 @@ function List(props) {
     setSearchPorciones={setSearchPorciones}
     porcionesMayor={porcionesMayor}
     setPorcionesMayor={setPorcionesMayor}
+    setSortCards={setSortCards}
     />
     <ul className="contenido">
 
@@ -62,7 +70,7 @@ function List(props) {
             return plato
           }
         }
-      })
+      }).sort((a,b) => a[sortCards] - b[sortCards])
       .map((plato, index) => (
         <ListItem
         {...plato}

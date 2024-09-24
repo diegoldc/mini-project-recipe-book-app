@@ -1,10 +1,16 @@
-import React from 'react'
+import {useEffect} from 'react'
 import imgGit from "../assets/github-yellow.png"
 import imgLi from "../assets/linkedin.png"
 import imgDiego from "../assets/diego.png"
 import imgJuan from "../assets/juan.jpg"
 
 function About() {
+
+  useEffect(() => {
+    const titulo = document.querySelector("#tituloPestaña")
+    titulo.innerText = "About - Hecho en Casa"
+  },[])
+
   return (
     <div style={{display:"flex",justifyContent:"space-around", gap:"20px"}}>
     <article className='aboutCard'>

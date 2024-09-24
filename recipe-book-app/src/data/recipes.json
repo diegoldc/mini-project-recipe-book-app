@@ -2,9 +2,9 @@
   {
     "id": "9e7f0d61-aa6b-418a-b56a-6418d19e6e1d",
     "name": "Pizza",
-    "calories": 400,
+    "calories": 800,
     "image": "https://i.imgur.com/eTmWoAN.png",
-    "servings": 1
+    "servings": 2
   },
   {
     "id": "37e0b31d-63f4-4d42-9f4b-e9a0fc464d60",
@@ -25,21 +25,21 @@
     "name": "Gnocchi",
     "calories": 500,
     "image": "https://i.imgur.com/93ekwW0.jpg",
-    "servings": 1
+    "servings": 3
   },
   {
     "id": "f4b4d2bc-ff12-4f3f-b3b3-19d2f1682401",    
     "name": "Pot Roast",
     "calories": 350,
     "image": "https://i.imgur.com/WCzJDWz.jpg",
-    "servings": 1
+    "servings": 4
   },
   {
     "id": "bf89c1db-5c5b-4262-9d1e-8a68f88c61d5",    
     "name": "Lasagna",
     "calories": 750,
     "image": "https://i.imgur.com/ClxOafl.jpg",
-    "servings": 1
+    "servings": 2
   },
   {
     "id": "bca9beec-43d3-48b1-9b57-793a8a8c3520",
@@ -60,7 +60,7 @@
     "name": "Almonds",
     "calories": 75,
     "image": "https://i.imgur.com/JRp4Ksx.jpg",
-    "servings": 1
+    "servings": 0.5
   },
   {
     "id": "e1f87a2e-60b3-4a3f-bb48-20a396a9a94f",    
@@ -88,14 +88,14 @@
     "name": "Chocolate Cake",
     "calories": 490,
     "image": "https://i.imgur.com/yrgzA9x.jpg",
-    "servings": 1
+    "servings": 4
   },
   {
     "id": "07d9616d-7a63-457c-b8a7-58f6a70a67e3",
     "name": "Wheat Bread",
     "calories": 175,
     "image": "https://i.imgur.com/TsWzMfM.jpg",
-    "servings": 1
+    "servings": 10
   },
   {
     "id": "d7a8f0c1-0a34-4e3b-a2d3-3c3e3f11eb19",
@@ -109,7 +109,7 @@
     "name": "Banana",
     "calories": 175,
     "image": "https://i.imgur.com/BMdJhu5.jpg",
-    "servings": 1
+    "servings": 0.5
   },
   {
     "id": "62d8a0bc-1b77-4389-9e7b-2e00cace6a2e",

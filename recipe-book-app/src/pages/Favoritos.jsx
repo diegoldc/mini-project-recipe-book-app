@@ -1,6 +1,12 @@
 import ItemFavorito from "../componentes/ItemFavorito"
+import { useEffect } from "react"
 
 function Favoritos({recetasFavoritas,setRecetasFavoritas}) {
+
+  useEffect(() => {
+    const titulo = document.querySelector("#tituloPestaña")
+    titulo.innerText = "Favoritos - Hecho en Casa"
+  },[])
 
   if (recetasFavoritas.length === 0) {
     return(
