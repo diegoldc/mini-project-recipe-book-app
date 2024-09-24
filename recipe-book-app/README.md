@@ -1,8 +1,19 @@
 - display de recetas extraidas de un JSON
 - renderizacion de tarjetas con dicha informacion
 - rutas creadas con React
+- sideBar con links a las paginas
 - links a una pagina personalizada para cada receta
+- pagina que despliega informacion sobre nosotros
+- links a nuestros linkedin, github, y al repo de este proyecto
 - boton de eliminar receta de lista
 - boton de edicion de recetas con PopUps
+
+- pagina "page not found" para coger URLs no conocidas
+- formulario para agregar nueva receta
+- foto predeterminada para recetas nuevas sin foto
 - boton de agregar a favoritos que genera una nueva lista de recetas favoritas
 - pagina que renderiza todas las recetas favoritas
+- filtros de busqueda (dos simultaneos)
+- ordenar por calorias o porciones
+- buscar por nombre
+- la pestaña dice en que pagina estas

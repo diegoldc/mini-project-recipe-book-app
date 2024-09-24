@@ -27,6 +27,7 @@ function List(props) {
   const [ searchPorciones , setSearchPorciones ] = useState("")
   const [ porcionesMayor , setPorcionesMayor ] = useState(true)
   const [ sortCards , setSortCards ] = useState("")
+  const [ porNombre , setPorNombre ] = useState("")
   
   return (
     <>
@@ -41,6 +42,8 @@ function List(props) {
     porcionesMayor={porcionesMayor}
     setPorcionesMayor={setPorcionesMayor}
     setSortCards={setSortCards}
+    porNombre={porNombre}
+    setPorNombre={setPorNombre}
     />
     <ul className="contenido">
 
@@ -70,7 +73,14 @@ function List(props) {
             return plato
           }
         }
-      }).sort((a,b) => a[sortCards] - b[sortCards])
+      }).filter((plato) => {
+        if (porNombre === ""){
+          return plato
+        } else {
+          return plato.name.toLowerCase().includes(porNombre)
+        }
+      })
+      .sort((a,b) => a[sortCards] - b[sortCards])
       .map((plato, index) => (
         <ListItem
         {...plato}

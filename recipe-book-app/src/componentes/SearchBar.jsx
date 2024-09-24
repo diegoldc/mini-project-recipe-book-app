@@ -8,6 +8,8 @@ function SearchBar({
   porcionesMayor,
   setPorcionesMayor,
   setSortCards,
+  porNombre,
+  setPorNombre
 }) {
   const handleCaloriesMaourBtn = () => {
     caloriasMayor ? setCaloriasMayor(false) : setCaloriasMayor(true);
@@ -52,6 +54,10 @@ function SearchBar({
           <option value="calories">Calorías</option>
           <option value="servings">Porciones</option>
         </select>
+      </div>
+      <div>
+        <label htmlFor="nombre">Buscar por nombre: </label>
+        <input type="text" name="nombre" id="nombre" value={porNombre} onChange={() => setPorNombre(event.target.value)} />
       </div>
     </div>
   );
