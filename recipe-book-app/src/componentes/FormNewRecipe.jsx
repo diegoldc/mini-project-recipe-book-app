@@ -80,7 +80,7 @@ function FormNewRecipe(props) {
           value={servingsValue}
         />
         </div>
-        <button type="submit" className="cardButton" >Submit</button>
+        <button type="submit" className="cardButton submit" >Submit</button>
 
     </form>
   );

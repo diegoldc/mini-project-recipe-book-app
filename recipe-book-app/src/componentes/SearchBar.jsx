@@ -46,8 +46,8 @@ function SearchBar({
         />
       </div>
       <div>
-        <label htmlFor="filtro">Filtrar por: </label>
-        <select name="filtro" id="filtro" onClick={() => setSortCards(event.target.value)}>
+        <label htmlFor="filtro">Ordenar por: </label>
+        <select name="filtro" id="filtro" onClick={() => setSortCards(event.target.value)} style={{backgroundColor:"rgb(255, 217, 0, 0.4)",borderRadius:"5px"}} >
           <option value="">Choose One</option>
           <option value="calories">calorias</option>
           <option value="servings">Porciones</option>

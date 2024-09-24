@@ -12,7 +12,7 @@ function About() {
   },[])
 
   return (
-    <div style={{display:"flex",justifyContent:"space-around", gap:"20px"}}>
+    <div className='about-container'>
     <article className='aboutCard'>
       <img className='profilePic' src={imgJuan} alt="foto de perfil" />
       <div>
@@ -32,7 +32,7 @@ function About() {
       <img className='profilePic' src={imgDiego} alt="foto de perfil" />
       <div>
 
-      <h1>Diego Lazaro</h1>
+      <h1>Diego Lázaro</h1>
       <h3>Edad</h3>
       <p>32</p>
       <h3>Ciudad</h3>

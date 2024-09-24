@@ -19,7 +19,6 @@ function ListItem(props) {
 
   const handleFavorite = (index) => {
 
-    setIsFav(true)
 
     const newFav = {
       id:props.todasLasRecetas[index].id,
