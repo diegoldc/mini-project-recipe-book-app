@@ -13,12 +13,14 @@ function EditRecipe(props) {
   const handleSubmit = (event) => {
     event.preventDefault()
     const clone = [...todasLasRecetas]
-    console.log(clone)
+    // let newId = Math.random()*1000
+    // nameValue !== "" ? clone[index].id = nameValue : clone[index].id = newId
     nameValue !== "" && (clone[index].name = nameValue) 
     caloriesValue !== "" && (clone[index].calories = caloriesValue) 
     servingsValue !== "" && (clone[index].servings = servingsValue) 
     imgValue !== "" && (clone[index].image = imgValue) 
     setTodasLasRecetas(clone)
+    console.log(todasLasRecetas)
     close()
   }
 

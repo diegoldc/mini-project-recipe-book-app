@@ -1,17 +1,22 @@
 import recipes from "../data/recipes.json"
-import { useParams } from "react-router-dom"
+import { useParams , useLocation } from "react-router-dom"
 import imgPlatoVacio from "../assets/plato-vacio.jpg"
 
 
 function RecipeDetails(props) {
-// poner un link en la lista a esta pagina
-  const {listaDeRecetas} = props
+  const location = useLocation()
 
   const parametrosDinamicos = useParams()
-  console.log(parametrosDinamicos)
 
-  const recipeToDisplay = listaDeRecetas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
-  console.log(recipeToDisplay.name)
+  let recipeToDisplay
+
+  if (location.state === "fav"){
+    recipeToDisplay = props.recetasFavoritas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
+  }
+  if (location.state === "home"){
+    recipeToDisplay = props.listaDeRecetas.find((recipe) => recipe.id === parametrosDinamicos.recipeId )
+  }
+
 
   return (
     <div className="singleRecipePage">

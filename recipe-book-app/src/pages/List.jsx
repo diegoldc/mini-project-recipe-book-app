@@ -1,8 +1,8 @@
 // import recipes from "../data/recipes.json";
 import { useState } from "react";
-import ListItem from "./ListItem";
-import FormNewRecipe from "./FormNewRecipe";
-import SearchBar from "./SearchBar";
+import ListItem from "../componentes/ListItem";
+import FormNewRecipe from "../componentes/FormNewRecipe";
+import SearchBar from "../componentes/SearchBar";
 
 
 function List(props) {

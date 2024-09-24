@@ -3,12 +3,11 @@ import Navbar from "./componentes/Navbar";
 import Sidebar from "./componentes/Sidebar";
 import Footer from "./componentes/Footer";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
 import RecipeDetails from "./pages/RecipeDetails";
 import About from "./pages/About";
 import NotFoundPage from "./pages/NotFoundPage";
 import recipes from "./data/recipes.json";
-import List from "./componentes/List";
+import List from "./pages/List";
 import { useState } from "react";
 import Favoritos from "./pages/Favoritos";
 
@@ -37,6 +36,7 @@ function App() {
           path="/recipes/:recipeId"
           element={
             <RecipeDetails
+              recetasFavoritas={recetasFavoritas}
               listaDeRecetas={todasLasRecetas} />}
         />
         <Route

@@ -36,7 +36,7 @@ function ListItem(props) {
 
   return (
     <li key={props.index} className="recipeCard">
-      <Link to={`/recipes/${props.id}`} style={{textDecoration: "none", color:"black"}}>
+      <Link to={`/recipes/${props.id}`} state={"home"} style={{textDecoration: "none", color:"black"}}>
       <img className="fotoDeReceta" src={props.image === "" ? imgPlatoVacio : props.image} alt={"Pic URN not found"} />
       <section>
         <h1>{props.name}</h1>

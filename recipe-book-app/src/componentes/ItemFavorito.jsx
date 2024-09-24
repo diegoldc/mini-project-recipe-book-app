@@ -2,6 +2,9 @@ import { Link } from "react-router-dom"
 import checkImg from "../assets/check.png";
 import crossImg from "../assets/cross.png";
 import imgPlatoVacio from "../assets/plato-vacio.jpg"
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css' 
+import EditRecipe from "./EditRecipe"
 
 function ItemFavorito(props) {
   const handleDelete = (index) => {
@@ -11,7 +14,7 @@ function ItemFavorito(props) {
   }
   return (
     <li key={props.index} className="favRecipeCard">
-      <Link to={`/recipes/${props.id}`} style={{display:"flex",gap:"50px",textDecoration: "none", color:"black"}}>
+      <Link to={`/recipes/${props.id}`} state={"fav"} style={{display:"flex",gap:"50px",textDecoration: "none", color:"black"}}>
       <img className="fotoDeReceta" src={props.image === "" ? imgPlatoVacio : props.image} alt={"Pic URN not found"} />
       <section style={{width:"200px"}}>
         <h1>{props.name}</h1>
@@ -30,6 +33,17 @@ function ItemFavorito(props) {
       </Link>
       <div style={{display:"flex",flexDirection:"column",alignItems:"center", justifyContent:"center",marginRight:"30px"}}>
       <button className="cardButton del" onClick={() => handleDelete(props.index)}>Delete</button>
+
+      <Popup trigger={<button className="cardButton edit">Edit</button>} position="bottom">
+          {(close) => (
+            <EditRecipe
+              todasLasRecetas={props.recetasFavoritas}
+              setTodasLasRecetas={props.setRecetasFavoritas}
+              index={props.index}
+              close={close}
+            />
+          )}
+        </Popup>
       </div>
     </li>
   )
